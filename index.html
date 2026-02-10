@@ -15,7 +15,13 @@
 			</h1>
 			<div>
 				<p>
-					Photo by
+					<a
+						target="_blank"
+						rel="noreferrer"
+						href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+						>Photo</a
+					>
+					by
 					<a
 						target="_blank"
 						rel="noreferrer"
@@ -51,32 +57,52 @@
 		<main>
 			<p>
 				This is not a real online service! You know you need something like this
-				in your life to help you realize your deepest dreams. Sign up now to get
-				started.
+				in your life to help you realize your deepest dreams. <br> Sign up now
+				to get started.
 			</p>
 			<p>You know you want to.</p>
 
 			<form action="#">
-				<p>Let's do this!</p>
-
 				<div>
-					<label for="firstName">First Name</label>
-					<input type="text" id="firstName">
+					<p>Let's do this!</p>
 
-					<label for="lastName">Last Name</label>
-					<input type="text" id="lastName">
+					<div>
+						<label for="firstName">
+							First Name
+							<br>
+							<input type="text" id="firstName" autofocus>
+						</label>
 
-					<label for="email">Email</label>
-					<input type="email" id="email">
+						<label for="lastName">
+							Last Name
+							<br>
+							<input type="text" id="lastName">
+						</label>
 
-					<label for="phoneNumber">Phone Number</label>
-					<input type="tel" id="phoneNumber">
+						<label for="email">
+							Email*
+							<br>
+							<input type="email" id="email" required>
+						</label>
 
-					<label for="password">Password</label>
-					<input type="password" id="password">
+						<label for="phoneNumber">
+							Phone Number
+							<br>
+							<input type="tel" id="phoneNumber">
+						</label>
 
-					<label for="confirmPassword">Confirm Password</label>
-					<input type="password" id="confirmPassword">
+						<label for="password">
+							Password*
+							<br>
+							<input type="password" id="password" required>
+						</label>
+
+						<label for="confirmPassword">
+							Confirm Password*
+							<br>
+							<input type="password" id="confirmPassword" required>
+						</label>
+					</div>
 				</div>
 
 				<button type="submit">Create Account</button>

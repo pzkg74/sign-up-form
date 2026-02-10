@@ -16,19 +16,21 @@ body {
 	margin: 0;
 	display: flex;
 	min-height: 100vh;
+	font-family: Arial, sans-serif;
 }
 
 body > div {
-	background-color: red;
 	background-image: url("./assets/background-image.png");
 	background-size: cover;
 	min-width: 35vw;
+	position: relative;
 
 	h1 {
 		background-color: rgba(0, 0, 0, 0.8);
 		font-family: Norse, sans-serif;
 		color: white;
 		display: flex;
+		gap: 10px;
 		justify-content: center;
 		align-items: center;
 		font-size: 5rem;
@@ -36,16 +38,128 @@ body > div {
 		margin-top: 200px;
 
 		img {
-			height: 200px;
+			height: 100px;
 		}
 	}
 
 	div {
 		text-align: center;
 		color: white;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		font-size: 0.9rem;
 
 		a {
 			color: white;
+		}
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: space-around;
+	gap: 10px;
+	background-color: hsl(210, 20%, 98%);
+
+	> * {
+		padding-right: 100px;
+	}
+
+	p {
+		margin: 16px 30px;
+		font-size: 1.5rem;
+		font-weight: bold;
+		text-wrap: balance;
+
+		a {
+			color: hsl(92, 20%, 35%);
+		}
+	}
+
+	p:last-child {
+		font-size: 1rem;
+		font-weight: normal;
+	}
+
+	form {
+		margin: 0;
+		padding: 0;
+
+		label {
+			text-transform: uppercase;
+			color: rgb(51, 51, 51);
+			font-size: 0.9rem;
+		}
+
+		> div {
+			background-color: white;
+			padding: 20px 0;
+			padding-left: 30px;
+			padding-right: 100px;
+			box-shadow: 0px 8px 19px 0px lightgrey;
+
+			p {
+				margin-left: 0;
+				margin-top: 0;
+			}
+
+			div {
+				display: grid;
+				grid-template-columns: 250px 250px;
+				row-gap: 20px;
+				column-gap: 60px;
+
+				input {
+					margin-top: 5px;
+					width: 100%;
+					font-size: 1rem;
+					padding: 5px;
+					border-radius: 5px;
+					border-width: 2px;
+					border-style: solid;
+					border-color: #e5e7eb;
+				}
+
+				input:focus {
+					border-color: hsl(224, 68%, 63%);
+					background-color: hsl(210, 20%, 98%);
+					outline: none;
+					box-shadow: 0px 8px 19px 0px lightgrey;
+				}
+
+				input:user-valid {
+					border-color: green;
+				}
+
+				input:user-invalid {
+					border-color: red;
+				}
+
+				label:has(input:required) {
+					font-style: italic;
+				}
+			}
+		}
+
+		button {
+			margin-left: 30px;
+			margin-top: 30px;
+			color: white;
+			background-color: hsl(92, 20%, 35%);
+			border: 0;
+			padding: 15px 50px;
+			border-radius: 10px;
+			font-size: 1.2rem;
+			cursor: pointer;
+			transition: 0.25s background-color;
+		}
+
+		button:hover {
+			background-color: hsl(92, 20%, 45%);
 		}
 	}
 }
