@@ -186,4 +186,8 @@ main {
 	body > main > p:first-child {
 		padding: 0;
 	}
+
+	body > main > form > div {
+		padding-right: 30px;
+	}
 }
